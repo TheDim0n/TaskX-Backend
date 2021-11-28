@@ -2,6 +2,7 @@
 Backend for TaskX project
 
 ![example workflow](https://github.com/TheDim0n/TaskX-Backend/actions/workflows/tests.yml/badge.svg)
+[![CI to Docker Hub](https://github.com/TheDim0n/TaskX-Backend/actions/workflows/ci.yml/badge.svg)](https://github.com/TheDim0n/TaskX-Backend/actions/workflows/ci.yml)
 
 
 ## Run with Docker:
