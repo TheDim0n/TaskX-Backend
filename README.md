@@ -1,4 +1,11 @@
-# FastAPI_Database_Template
-Template for FastAPI projects with database.
+# TaskX-Backend
+Backend for TaskX project
 
-![example workflow](https://github.com/TheDim0n/FastAPI_Database_Template/actions/workflows/tests.yml/badge.svg)
+![example workflow](https://github.com/TheDim0n/TaskX-Backend/actions/workflows/tests.yml/badge.svg)
+
+
+## Run with Docker:
+```
+docker-compose up
+```
+> API documentation available on http://localhost:8000/docs
