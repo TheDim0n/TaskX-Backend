@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  backend:
+    build: .
+    command: bash -c "python migrate.py && python run.py"
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://postgres:password@database:5432/taskx_db
+      - DEBUG=1
+    ports:
+      - 8000:8000
+  database:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=taskx_db
+    ports:
+      - 5440:5432
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes: 
+  pg_data: {}

@@ -1,0 +1,5 @@
+version: '3.9'
+
+services:
+  backend:
+    image: thedim0n/taskx/backend:latest

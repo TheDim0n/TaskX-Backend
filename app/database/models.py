@@ -1,10 +1,12 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Boolean, Column, Integer, String
 
 from .database import DataBase
 
 
-class Message(DataBase):
-    __tablename__ = "message"
+class Task(DataBase):
+    __tablename__ = "task"
 
     id = Column(Integer, primary_key=True)
-    message = Column(String(), nullable=False)
+    name = Column(String(), nullable=False)
+    description = Column(String(), nullable=True)
+    is_done = Column(Boolean, default=False)

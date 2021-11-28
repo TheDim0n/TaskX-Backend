@@ -1,15 +1,17 @@
 from pydantic import BaseModel
 
 
-class MessageBase(BaseModel):
-    message: str
+class TaskBase(BaseModel):
+    name: str
+    description: str
+    is_done: bool = None
 
 
-class MessageCreate(MessageBase):
+class TaskCreate(TaskBase):
     pass
 
 
-class MessageDB(MessageBase):
+class TaskDB(TaskBase):
     id: int
 
     class Config:

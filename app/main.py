@@ -41,8 +41,3 @@ async def db_session_middleware(request: Request, call_next):
     finally:
         request.state.db.close()
     return response
-
-
-@app.on_event("startup")
-async def startup_event():
-    automigrate()
