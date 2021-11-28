@@ -12,6 +12,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: sqlite:///./tests/sql_app.db
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.9
